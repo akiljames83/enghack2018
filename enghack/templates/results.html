@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Personal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<style type="text/css">
+	    .imgimg {
+	        width:400px;
+	        height:auto;
+	        border-radius:15px;
+	    }
+	    body {
+	        font-family: 'Raleway', sans-serif;
+	        font-size: 16px;
+	    }
+	    a.navbar-brand {
+	        font-size: 34px;
+	        font-family: 'Raleway', sans-serif;
+            color:white;
+	    }
+	    h2, h1,h5,h3 {
+	        font-family: 'Raleway', sans-serif;
+	    }
+	    .navbar-light .navbar-brand {
+            color: white;
+        }
+        
+	</style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-dark">
+      <a class="navbar-brand" href="/">
+        Socialoo
+      </a>
+    </nav>
+    <br><br><br>
+    <center>
+    <h1 style="color: black;"> Your Personalized ({{personality}}) Event List!
+    </h1>
+    <br>
+    </center>
+    <div class="container">
+        {% for d in data %}
+        <div class="card my-3">
+        <div class="card-body">
+        <center>
+        <h3 class="card-title"><strong>Event:</strong> {{d[0]}}</h5>
+        <h3><b>Date of the Event:</b> {{d[4]}}</h3>
+        </center>
+        <br>
+        <br>
+        
+        
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-6">
+                <center><h4 class="card-subtitle mb-2 text-muted">{{d[2]}}</h6></center>
+                <p style="text-align:justify; text-indent: 40px;line-height:2em;padding-bottom:20px" class="card-text">{{d[3]}}</p>
+            </div>
+            <div class="col-lg-6">
+        
+        
+        {% if d[5] == 0 %}
+        <img class="imgimg" src="https://images.unsplash.com/photo-1520891422668-fe731254aff0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98acae6b3f22dd06565a6445d6c7b30e&auto=format&fit=crop&w=1350&q=80"></img>
+        {% elif d[5] == 1 %}
+        <img class="imgimg" src="https://images.unsplash.com/photo-1472584069410-35e46830b642?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0a70e010545609b709860e0fa9c08914&auto=format&fit=crop&w=1950&q=80"></img>
+        {% elif d[5] == 2 %}
+        <img class="imgimg" src="https://images.unsplash.com/photo-1521048525864-2130780a12a5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=75d30710a3d1fb6c9cf52070c1bb379b&auto=format&fit=crop&w=1950&q=80"></img>
+        {% else %}
+        <img class="imgimg" src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1d0bff8bb159f3157a0a6291244e4761&auto=format&fit=crop&w=1350&q=80"></img>
+        {% endif %}
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+    {% endfor %}
+</div>
+</body>
+</html>

@@ -6,10 +6,10 @@ import tweepy #https://github.com/tweepy/tweepy
 import os.path
 #Twitter API credentials
 personality =  {'conscientiousness': 0, 'openness': 0, 'agreeableness': 0, 'extraversion':0}
-consumer_key = "3MgnekpZaYCWsKF6gApXWbqHu"
-consumer_secret = "tHSlgHx0bQ7QPuoPiTtHx2Yop3QxinLvWFjra4Cbo9sd1cAKh4"
-access_key = "1858948182-dNGntDdObwbrnk91sob1GiiuiHfjYMLKnCRQwoQ"
-access_secret = "ytoFsSGhA8NGYnBmmz1d16EFCDfb2nhnCliNjhbMN9IsY"
+consumer_key = ""
+consumer_secret = ""
+access_key = ""
+access_secret = ""
 indicoio.config.api_key = 'a70776a16ea44fe661bbb0e2aaec1e12'
 data = []
 
